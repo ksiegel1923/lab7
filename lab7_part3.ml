@@ -172,6 +172,7 @@ list`, even though that's the type you used in your implementation.
 
 module type INT_STACK =
   sig
+    exception EmptyStack
     type stack
     val empty : stack
     val push : int -> stack -> stack
@@ -197,7 +198,7 @@ preserves its abstraction barrier.
 ......................................................................*)
 
 let safe_stack () = 
-let open SafeIntListStack in
+  let open SafeIntListStack in
   empty
   |> push 5
   |> push 1 
