@@ -199,7 +199,6 @@ preserves its abstraction barrier.
 
 let safe_stack () : SafeIntListStack.stack = 
   let open SafeIntListStack in
-  empty
+  empty ()
   |> push 5
-  |> push 1 
-;;
+  |> push 1 ;;
