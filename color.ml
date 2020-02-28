@@ -10,7 +10,7 @@ doesn't pass all the unit tests. No need to debug it though. You'll be
 replacing it wholesale with a simpler implementation. *)
 
 (* 8-bit RGB channel colors *)
-type color = {red : int; green : int; blue : int} ;;
+type color = int * int * int ;;
 
 (* Some standard color names *)
 type color_name =

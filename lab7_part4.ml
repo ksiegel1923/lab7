@@ -101,7 +101,7 @@ argument and uses your Stack module to return a new stack with the
 following strings pushed in order: `"Computer"`, `"Science"`, `"51"`.
 ......................................................................*)
 
-let sample_stack = 
+let sample_stack () = 
   let open Stack in
   empty
   |> push "Computer"
@@ -113,5 +113,4 @@ Exercise 4C: Write an expression to generate a stack with the
 `sample_stack` function above and name the top element `top_el`.
 ......................................................................*)
 
-let top_el : string =
-  Stack.top (sample_stack ()) ;;
+let top_el : string = Stack.top (sample_stack ()) ;;
